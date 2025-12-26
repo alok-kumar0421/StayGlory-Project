@@ -88,9 +88,10 @@ gap:7.5px;
 }
 /* show page */
 .show-img{
-    height:30vh !important;
-    width:60vh !important;
-    object-fit:cover;
+    width: 100% !important;
+    height: auto !important;
+    max-height: 35vh;
+    object-fit: cover;
 }
 .btn-all{
     display:flex;
@@ -107,16 +108,16 @@ gap:7.5px;
 
 
 /* map */
-
-/* Map container styling */
 #map,
 .map-box {
-  width: 600px;
-  height: 350px;            /* map ki height */
-  border-radius: 16px;      /* rounded corners */
-  overflow: hidden;         /* corners ke bahar map na dikhe */
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* soft shadow */
+  width: 100% !important;
+  max-width: 100% !important;
+  height: 300px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   border: 1px solid #e5e5e5;
+  margin: 0 auto;
 }
 
 #map {
@@ -131,14 +132,10 @@ gap:7.5px;
   transition: all 0.7s ease;
 }
 
-
-
-
-/* Blink / Pulse marker */
 .pulse-marker {
   width: 18px;
   height: 18px;
-  background: red; /* StayGlory purple */
+  background: red; 
   border-radius: 50%;
   position: relative;
 }
@@ -156,7 +153,6 @@ gap:7.5px;
   animation: pulse 1.6s infinite;
 }
 
-/* animation */
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -255,5 +251,20 @@ gap:7.5px;
 
 
 
+p, li, h1, h2, h3, h4, h5 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
 
 
+/* Fix navbar collapse on mobile */
+.navbar-collapse {
+  background-color: white;
+  padding: 1rem;
+  width: 100%;
+  left: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
