@@ -119,6 +119,10 @@ app.get("/", (req, res) => {
   res.redirect("/listings");
 });
 
+//for awake
+app.get("/owner",(req,res)=>{
+    res.send("owner => ❤️MONALOK");
+});
 
 app.use("/listings",listingRouter);
 app.use("/listings/:id/reviews",reviewRouter);
